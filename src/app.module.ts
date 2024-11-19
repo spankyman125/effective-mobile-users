@@ -15,6 +15,9 @@ import { SequelizeModule } from '@nestjs/sequelize';
       models: [],
       autoLoadModels: true,
       synchronize: true,
+      define: {
+        timestamps: false,
+      },
     }),
   ],
   controllers: [AppController],
