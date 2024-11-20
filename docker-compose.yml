@@ -13,6 +13,7 @@ services:
       - "5432"
 
   nest:
+    restart: always
     depends_on:
       - db
     environment:
@@ -25,5 +26,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - "${API_PORT}:3000"
-    volumes:
-      - ./:/app

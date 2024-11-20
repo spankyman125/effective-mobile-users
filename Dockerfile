@@ -1,7 +1,7 @@
 FROM node:23.1.0
 WORKDIR /app
-COPY package.json /app/
-COPY yarn.lock /app/
+COPY . /app/
 RUN yarn install
-CMD yarn run start
+RUN yarn run build
+CMD yarn run start:prod
 EXPOSE 3000
